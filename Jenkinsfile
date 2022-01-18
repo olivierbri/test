@@ -11,9 +11,10 @@ pipeline {
             steps {
                 script {
 					sh """
-						pwd
-						ls -l
-						ls -l ../
+						echo test file_test
+						git add file_test
+						git commit -m 'test'
+						git push
 					"""	
                     
                 }
