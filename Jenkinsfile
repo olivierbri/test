@@ -17,7 +17,7 @@ pipeline {
 						echo test > file_test
 						git add file_test
 						git commit -m 'test'
-						git push
+						git push --set-upstream origin master
 					"""	
                     
                 }
