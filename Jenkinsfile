@@ -10,6 +10,7 @@ pipeline {
         stage('git') {
             steps {
                 script {
+			git 'https://github.com/olivierbri/monappli.git'
 					sh """
 						echo test > file_test
 						git add file_test
