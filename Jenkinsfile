@@ -12,6 +12,8 @@ pipeline {
                 script {
 			git 'https://github.com/olivierbri/monappli.git'
 					sh """
+						ls -l
+						ls -l ../
 						echo test > file_test
 						git add file_test
 						git commit -m 'test'
