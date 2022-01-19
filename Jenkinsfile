@@ -10,7 +10,7 @@ pipeline {
         stage('git') {
             steps {
                 script {
-			git 'https://github.com/olivierbri/monappli.git'
+			git credentialsId: 'compte_olivierbri', url: 'https://github.com/olivierbri/monappli.git'
 					sh """
 						ls -l
 						ls -l ../
