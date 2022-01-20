@@ -10,17 +10,19 @@ pipeline {
         stage('git') {
             steps {
                 script {
-					sh """
+			withCredentials([usernamePassword(credentialsId: 'olivierbri', passwordVariable: 'password', usernameVariable: 'username')]) {
+    
+    					sh """
+						git pull --rebase origin master
 						ls -l
 						ls -l ../
-						git checkout test
-						echo test > file_test
-						git add file_test
+						git config user.name "olivierbri"
+						echo te > file_te
+						git add file_te
 						git commit -m 'test'
-						git checkout main
-						git push origin test
+						git push --repo=https://${username}:${password}@github.com/olivierbri/test.git --set-upstream https://${username}:${password}@github.com/olivierbri/test.git main
 					"""	
-                    
+			}
                 }
             }
         }
