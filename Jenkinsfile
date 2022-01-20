@@ -13,13 +13,13 @@ pipeline {
 			withCredentials([usernamePassword(credentialsId: 'olivierbri', passwordVariable: 'password', usernameVariable: 'username')]) {
     
     					sh """
-						git pull --rebase origin master
+						git pull --rebase origin main
 						ls -l
 						ls -l ../
 						git config user.name "olivierbri"
 						echo te > file_te
-						git add file_te
-						git commit -m 'test'
+						git add *
+						git commit -am 'test'
 						git push --repo=https://${username}:${password}@github.com/olivierbri/test.git --set-upstream https://${username}:${password}@github.com/olivierbri/test.git main
 					"""	
 			}
