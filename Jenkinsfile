@@ -13,7 +13,7 @@ pipeline {
 					sh """
 						ls -l
 						ls -l ../
-						git checkout -b test
+						git checkout test
 						echo test > file_test
 						git add file_test
 						git commit -m 'test'
