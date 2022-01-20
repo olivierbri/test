@@ -10,15 +10,16 @@ pipeline {
         stage('git') {
             steps {
                 script {
-			git credentialsId: 'olivierbri', url: 'git@github.com:olivierbri/monappli.git'
+			withCredentials([usernamePassword(credentialsId: 'olivierbri', passwordVariable: 'password', usernameVariable: 'username')]) {
+    
 					sh """
 						ls -l
 						ls -l ../
 						echo test > file_test
 						git add file_test
 						git commit -m 'test'
-						git push --set-upstream origin master
-					"""	
+						git push
+			}		"""	
                     
                 }
             }
