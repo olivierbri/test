@@ -17,7 +17,7 @@ pipeline {
 						echo test > file_test
 						git add file_test
 						git commit -m 'test'
-						git checkout master
+						git checkout main
 						git push origin test
 					"""	
                     
