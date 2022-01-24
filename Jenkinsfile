@@ -15,6 +15,7 @@ pipeline {
     					sh """
 						git pull --rebase origin main
 						# git pull --rebase
+						git remote rm origin
 						ls -l
 						ls -l ../
 						# git config user.name "olivierbri"
