@@ -16,6 +16,8 @@ pipeline {
 						git pull --rebase origin main
 						# git pull --rebase
 						git remote rm origin
+						mkdir rep_copie
+						cp -r * rep_copie/ --exclude rep_copie
 						ls -l
 						ls -l ../
 						# git config user.name "olivierbri"
