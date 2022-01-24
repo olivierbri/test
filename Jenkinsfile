@@ -16,6 +16,7 @@ pipeline {
 						git pull --rebase origin main
 						# git pull --rebase
 						git remote rm origin
+						rm -R rep_copie
 						mkdir rep_copie
 						cp -r * !(rep_copie) rep_copie/
 						ls -l
