@@ -17,10 +17,11 @@ pipeline {
 						# git pull --rebase
 						git remote rm origin
 						rm -R rep_copie
+						tar -cvzf * archive.tar.gz
 						mkdir rep_copie
-						cp -r * !(rep_copie) rep_copie/
+						tar -xvzf archive.tar.gz rep_copie/
 						ls -l
-						ls -l ../
+						ls -l rep_copie/
 						# git config user.name "olivierbri"
 						# echo te > file_te
 						# git add *
