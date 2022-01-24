@@ -16,7 +16,7 @@ pipeline {
 						git pull --rebase origin main
 						# git pull --rebase
 						git remote rm origin
-						rm -R rep_copie
+						if [ -d rep_copie ]; then rm -r rep_copie; fi
 						tar -cvzf * archive.tar.gz
 						mkdir rep_copie
 						tar -xvzf archive.tar.gz rep_copie/
