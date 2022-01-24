@@ -19,7 +19,7 @@ pipeline {
 						if [ -d rep_copie ]; then rm -r rep_copie; fi
 						tar -cvzf * archive.tar.gz
 						mkdir rep_copie
-						tar -xvzf archive.tar.gz rep_copie/
+						tar -xvzf archive.tar.gz --directory rep_copie/
 						ls -l
 						ls -l rep_copie/
 						# git config user.name "olivierbri"
