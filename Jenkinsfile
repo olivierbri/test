@@ -23,6 +23,8 @@ pipeline {
 						ls -l
 						ls -l rep_copie/
 						git clone https://${username}:${password}@github.com/olivierbri/monappli.git
+						ls -l
+						ls -l ../
 						# git config user.name "olivierbri"
 						# echo te > file_te
 						# git add *
