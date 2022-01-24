@@ -22,6 +22,7 @@ pipeline {
 						tar -xvzf archive.tar.gz --directory rep_copie/
 						ls -l
 						ls -l rep_copie/
+						git clone https://github.com/olivierbri/monappli.git
 						# git config user.name "olivierbri"
 						# echo te > file_te
 						# git add *
