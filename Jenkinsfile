@@ -13,8 +13,8 @@ pipeline {
 			withCredentials([usernamePassword(credentialsId: 'olivierbri', passwordVariable: 'password', usernameVariable: 'username')]) {
     
     					sh """
-						# git pull --rebase origin main
-						git pull --rebase
+						git pull --rebase origin main
+						// git pull --rebase
 						ls -l
 						ls -l ../
 						# git config user.name "olivierbri"
