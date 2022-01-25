@@ -30,7 +30,7 @@ pipeline {
 						ls -l
 						git add *
 						git commit -m 'copie'
-						git push origin main
+						git push origin master
 						ls -l ../
 						# git config user.name "olivierbri"
 						# echo te > file_te
