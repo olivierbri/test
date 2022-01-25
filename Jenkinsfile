@@ -26,7 +26,11 @@ pipeline {
 						ls -l rep_copie/
 						git clone https://${username}:${password}@github.com/olivierbri/monappli.git
 						cp -r rep_copie monappli/
+						cd monappli/
 						ls -l
+						git add *
+						git commit -m 'copie'
+						git push origin main
 						ls -l ../
 						# git config user.name "olivierbri"
 						# echo te > file_te
