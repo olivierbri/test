@@ -17,12 +17,13 @@ pipeline {
 						# git pull --rebase
 						git remote rm origin
 						if [ -d rep_copie ]; then rm -r rep_copie; fi
-						tar --exclude='./rep_copie' -cvzf archive.tar.gz *
+						tar --exclude='./rep_copie' --exclude='./monappli' -cvzf archive.tar.gz *
 						mkdir rep_copie
 						tar -xvzf archive.tar.gz --directory rep_copie/
 						ls -l
 						ls -l rep_copie/
 						git clone https://${username}:${password}@github.com/olivierbri/monappli.git
+						cp -r rep_copie monappli/
 						ls -l
 						ls -l ../
 						# git config user.name "olivierbri"
