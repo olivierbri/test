@@ -17,7 +17,8 @@ pipeline {
 						# git pull --rebase
 						git remote rm origin
 						if [ -d rep_copie ]; then rm -r rep_copie; fi
-						tar --exclude='./rep_copie' --exclude='./monappli' -cvzf archive.tar.gz *
+						ls -l
+						tar -cvzf archive.tar.gz --exclude='./monappli' --exclude='./rep_copie' *
 						mkdir rep_copie
 						tar -xvzf archive.tar.gz --directory rep_copie/
 						ls -l
